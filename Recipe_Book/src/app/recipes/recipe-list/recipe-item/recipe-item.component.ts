@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { Recipe } from '../../recipe.model';
 
@@ -9,4 +9,11 @@ import { Recipe } from '../../recipe.model';
 })
 export class RecipeItemComponent {
   @Input() recipe = {} as Recipe; // This is casted!!! In othe case it won't work.
+  @Output() recipeSelected = new EventEmitter<void>();
+
+  constructor() {}
+
+  onSelected() {
+    this.recipeSelected.emit();
+  }
 }
