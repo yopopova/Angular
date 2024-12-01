@@ -28,8 +28,8 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
-    FormsModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]
